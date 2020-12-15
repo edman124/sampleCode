@@ -1,0 +1,30 @@
+run in directory:
+python raytracer.py commandsFile.txt
+
+example commands files included
+
+Commands:
+png width height filename
+	Create image with specified width, height, and filename.
+
+sphere x y z r
+	Add the sphere with center (x, y, z) and radius r to the list of objects to be rendered. 
+	The sphere uses the current color as its color.
+
+sun x y z
+	Add a sun light infinitely far away in the (x, y, z)(x,y,z) direction. 
+	Can handle multiple suns in a scene.
+	Use the current color as the color of the sunlight.
+
+color r g b
+	Defines the current color to be r g b, specified as floating-point values; (0, 0, 0) is black, (1, 1, 1) is white, (1, 0.5, 0)(1,0.5,0) is orange, etc. 
+	White is the default color and One color is tracked at a time.
+	Can handle negative light.
+
+bulb x y z 
+	Add a point light source centered at (x, y, z)(x,y,z). Use the current color as the color of the bulb. 
+	Can handle multiple bulbs in a scene.
+	Includes fall-off to bulb light
+
+eye e_x e_y	e_z
+	change the eye location used in generating rays
